@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Now Playing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NowPlayingViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WAo-1z-254">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="187" id="Xdz-gZ-5G1" customClass="MovieCell" customModule="Flix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="187"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xdz-gZ-5G1" id="R2c-nd-MgV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2i8-rQ-gQA">
+                                                    <rect key="frame" x="8" y="15" width="115" height="152.5"/>
+                                                    <color key="backgroundColor" red="0.32134720907350611" green="1" blue="0.30111365183447558" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="115" id="OF8-hU-fQ2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rih-Fq-Ayj">
+                                                    <rect key="frame" x="139" y="25" width="215" height="142.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="158" id="9gx-pu-FxA"/>
+                                                        <constraint firstAttribute="width" constant="215" id="Z9X-sL-15H"/>
+                                                    </constraints>
+                                                    <string key="text">A deep sea submersible pilot revisits his past fears in the Mariana Trench, and accidentally unleashes the seventy foot ancestor of the Great White Shark believed to be extinct.</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Meg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSk-eZ-otT">
+                                                    <rect key="frame" x="139" y="8" width="199" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="AGA-Ep-Vxk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2i8-rQ-gQA" firstAttribute="bottom" secondItem="rih-Fq-Ayj" secondAttribute="bottom" id="87D-MX-VLP"/>
+                                                <constraint firstItem="xSk-eZ-otT" firstAttribute="leading" secondItem="rih-Fq-Ayj" secondAttribute="leading" id="Gkk-B9-Xvu"/>
+                                                <constraint firstItem="2i8-rQ-gQA" firstAttribute="top" secondItem="R2c-nd-MgV" secondAttribute="topMargin" constant="7" id="LJg-0Y-XJS"/>
+                                                <constraint firstAttribute="trailing" secondItem="rih-Fq-Ayj" secondAttribute="trailing" id="N5q-Rh-elj"/>
+                                                <constraint firstItem="xSk-eZ-otT" firstAttribute="leading" secondItem="2i8-rQ-gQA" secondAttribute="trailing" constant="16" id="UxI-ki-Op5"/>
+                                                <constraint firstItem="rih-Fq-Ayj" firstAttribute="top" secondItem="R2c-nd-MgV" secondAttribute="topMargin" constant="17" id="VDI-6a-E3q"/>
+                                                <constraint firstItem="2i8-rQ-gQA" firstAttribute="centerY" secondItem="R2c-nd-MgV" secondAttribute="centerY" id="WcD-Fb-Z6U"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xSk-eZ-otT" secondAttribute="trailing" constant="8" id="Wvg-Xu-9gh"/>
+                                                <constraint firstItem="xSk-eZ-otT" firstAttribute="top" secondItem="R2c-nd-MgV" secondAttribute="topMargin" id="Yr1-7h-J5F"/>
+                                                <constraint firstItem="2i8-rQ-gQA" firstAttribute="leading" secondItem="R2c-nd-MgV" secondAttribute="leadingMargin" id="bZa-eN-AKP"/>
+                                                <constraint firstAttribute="bottom" secondItem="rih-Fq-Ayj" secondAttribute="bottom" constant="15.5" id="pjp-BZ-w01"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="OverviewLabel" destination="rih-Fq-Ayj" id="bsn-Wx-ST6"/>
+                                            <outlet property="overviewLabel" destination="rih-Fq-Ayj" id="PBb-QC-hyA"/>
+                                            <outlet property="posterImageView" destination="2i8-rQ-gQA" id="w20-S3-FLb"/>
+                                            <outlet property="titleLabel" destination="xSk-eZ-otT" id="neA-j5-8v0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WAo-1z-254" secondAttribute="trailing" id="2T8-ND-pID"/>
+                            <constraint firstItem="WAo-1z-254" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="L7B-ur-z9A"/>
+                            <constraint firstItem="WAo-1z-254" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NWM-DU-lml"/>
+                            <constraint firstItem="WAo-1z-254" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lcY-lb-CFF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="WAo-1z-254" id="LaJ-Kc-bJ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+</document>
